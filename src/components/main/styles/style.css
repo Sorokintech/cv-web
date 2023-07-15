@@ -1,0 +1,280 @@
+/* MAIN */
+.Wrapper {
+  width: 800px;
+  height: 400px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+.Wrapper:hover > .Card {
+  transform: rotateX(180deg);
+}
+@media (max-width: 850px) {
+  .Wrapper {
+    width: 600px;
+    height: 300px;
+  }
+}
+@media (max-width: 650px) {
+  .Wrapper {
+    width: 350px;
+    height: 200px;
+  }
+}
+@media (max-width: 400px) {
+  .Wrapper {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+.Card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1000ms;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* FRONT CARD */
+.FrontCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.FrontCard__LeftPanel {
+  background-image: url("/public/background/11.jpg");
+  background-size: cover;
+  width: 55%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-top: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+@media (max-width: 850px) {
+  .FrontCard__LeftPanel {
+    height: 90%;
+  }
+}
+@media (max-width: 650px) {
+  .FrontCard__LeftPanel {
+    padding-left: 10px;
+    height: 90%;
+    width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .FrontCard__LeftPanel {
+    height: 85%;
+  }
+}
+.FrontCard__LeftPanel :nth-child(1) {
+  font-size: 30px;
+}
+@media (max-width: 850px) {
+  .FrontCard__LeftPanel :nth-child(1) {
+    font-size: 25px;
+  }
+}
+@media (max-width: 650px) {
+  .FrontCard__LeftPanel :nth-child(1) {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .FrontCard__LeftPanel :nth-child(1) {
+    font-size: 10px;
+  }
+}
+.FrontCard__LeftPanel :nth-child(2) {
+  font-size: 40px;
+}
+@media (max-width: 850px) {
+  .FrontCard__LeftPanel :nth-child(2) {
+    font-size: 35px;
+  }
+}
+@media (max-width: 650px) {
+  .FrontCard__LeftPanel :nth-child(2) {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .FrontCard__LeftPanel :nth-child(2) {
+    font-size: 15px;
+  }
+}
+.FrontCard__LeftPanel :nth-child(3) {
+  font-size: 18px;
+  padding-bottom: 250px;
+}
+@media (max-width: 850px) {
+  .FrontCard__LeftPanel :nth-child(3) {
+    padding-bottom: 170px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .FrontCard__LeftPanel :nth-child(3) {
+    font-size: 12px;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 400px) {
+  .FrontCard__LeftPanel :nth-child(3) {
+    font-size: 8px;
+    padding-bottom: 80px;
+  }
+}
+.FrontCard__LeftPanel :nth-child(4) {
+  background-color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media (max-width: 850px) {
+  .FrontCard__LeftPanel :nth-child(4) {
+    font-size: 14px;
+  }
+}
+@media (max-width: 650px) {
+  .FrontCard__LeftPanel :nth-child(4) {
+    font-size: 8px;
+  }
+}
+@media (max-width: 400px) {
+  .FrontCard__LeftPanel :nth-child(4) {
+    font-size: 5px;
+  }
+}
+.FrontCard__RightPanel {
+  background-image: url("/public/main/main.jpg");
+  background-size: cover;
+  width: 45%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@media (max-width: 650px) {
+  .FrontCard__RightPanel {
+    width: 50%;
+  }
+}
+
+/* BACK CARD */
+.BackCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  background-size: cover;
+  background-color: rgba(74, 171, 164, 0.6);
+}
+.BackCard__Skills {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 30px;
+}
+@media (max-width: 650px) {
+  .BackCard__Skills {
+    padding-left: 10px;
+  }
+}
+.BackCard__Skills__List {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  list-style: inside circle;
+}
+@media (max-width: 850px) {
+  .BackCard__Skills__List {
+    font-size: 25px;
+    padding-top: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .BackCard__Skills__List {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .BackCard__Skills__List {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+}
+.BackCard__Skills__List__Item {
+  font-size: 20px;
+}
+@media (max-width: 850px) {
+  .BackCard__Skills__List__Item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .BackCard__Skills__List__Item {
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+  .BackCard__Skills__List__Item {
+    font-size: 9px;
+  }
+}
+.BackCard__ContactInfo {
+  margin-top: 80px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #fff;
+}
+@media (max-width: 850px) {
+  .BackCard__ContactInfo {
+    margin-top: 40px;
+    gap: 25px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .BackCard__ContactInfo {
+    margin-top: 15px;
+    padding: 5px 0;
+    gap: 12px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .BackCard__ContactInfo {
+    margin-top: 15px;
+    padding: 5px 0;
+    gap: 4px;
+    font-size: 6px;
+  }
+}
+.BackCard__ContactInfo > a {
+  text-decoration: none;
+  color: #000;
+  transition: all ease 0.5s;
+}
+.BackCard__ContactInfo :hover {
+  color: rgb(74, 171, 164);
+}/*# sourceMappingURL=style.css.map */

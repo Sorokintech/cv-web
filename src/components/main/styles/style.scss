@@ -1,0 +1,225 @@
+@import "../../../styles/variables/variables.scss";
+
+/* MAIN */
+.Wrapper {
+  width: 800px;
+  height: 400px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+  &:hover > .Card {
+    transform: rotateX(180deg);
+  }
+  @media (max-width: 850px) {
+    width: 600px;
+    height: 300px;
+  }
+  @media (max-width: 650px) {
+    width: 350px;
+    height: 200px;
+  }
+  @media (max-width: 400px) {
+    width: 250px;
+    height: 150px;
+  }
+}
+.Card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1000ms;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* FRONT CARD */
+
+.FrontCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  backface-visibility: hidden;
+  position: absolute;
+  &__LeftPanel {
+    background-image: url("/background/11.jpg");
+    background-size: cover;
+    width: 55%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-top: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    @media (max-width: 850px) {
+      height: 90%;
+    }
+    @media (max-width: 650px) {
+      padding-left: 10px;
+      height: 90%;
+      width: 50%;
+    }
+    @media (max-width: 400px) {
+      height: 85%;
+    }
+    :nth-child(1) {
+      font-size: 30px;
+      @media (max-width: 850px) {
+        font-size: 25px;
+      }
+      @media (max-width: 650px) {
+        font-size: 15px;
+      }
+      @media (max-width: 400px) {
+        font-size: 10px;
+      }
+    }
+    :nth-child(2) {
+      font-size: 40px;
+      @media (max-width: 850px) {
+        font-size: 35px;
+      }
+      @media (max-width: 650px) {
+        font-size: 20px;
+      }
+      @media (max-width: 400px) {
+        font-size: 15px;
+      }
+    }
+    :nth-child(3) {
+      font-size: 18px;
+      padding-bottom: 250px;
+      @media (max-width: 850px) {
+        padding-bottom: 170px;
+        font-size: 16px;
+      }
+      @media (max-width: 650px) {
+        font-size: 12px;
+        padding-bottom: 100px;
+      }
+      @media (max-width: 400px) {
+        font-size: 8px;
+        padding-bottom: 80px;
+      }
+    }
+    :nth-child(4) {
+      background-color: #fff;
+      width: fit-content;
+      @media (max-width: 850px) {
+        font-size: 14px;
+      }
+      @media (max-width: 650px) {
+        font-size: 8px;
+      }
+      @media (max-width: 400px) {
+        font-size: 5px;
+      }
+    }
+  }
+  &__RightPanel {
+    background-image: url("/public/main/main.jpg");
+    background-size: cover;
+    width: 45%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @media (max-width: 650px) {
+      width: 50%;
+    }
+  }
+}
+
+/* BACK CARD */
+
+.BackCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  background-size: cover;
+  background-color: rgba(74, 171, 164, 0.6);
+  &__Skills {
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 30px;
+    @media (max-width: 650px) {
+      padding-left: 10px;
+    }
+    &__List {
+      font-size: 30px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      list-style: inside circle;
+      @media (max-width: 850px) {
+        font-size: 25px;
+        padding-top: 15px;
+      }
+      @media (max-width: 650px) {
+        font-size: 18px;
+        padding-top: 10px;
+      }
+      @media (max-width: 400px) {
+        font-size: 14px;
+        padding-top: 5px;
+      }
+      &__Item {
+        font-size: 20px;
+        @media (max-width: 850px) {
+          font-size: 16px;
+        }
+        @media (max-width: 650px) {
+          font-size: 12px;
+        }
+        @media (max-width: 400px) {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+  &__ContactInfo {
+    margin-top: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: $backgroundWhite;
+    @media (max-width: 850px) {
+      margin-top: 40px;
+      gap: 25px;
+      font-size: 16px;
+    }
+    @media (max-width: 650px) {
+      margin-top: 15px;
+      padding: 5px 0;
+      gap: 12px;
+      font-size: 10px;
+    }
+    @media (max-width: 400px) {
+      margin-top: 15px;
+      padding: 5px 0;
+      gap: 4px;
+      font-size: 6px;
+    }
+
+    > a {
+      text-decoration: none;
+      color: #000;
+      transition: all ease 0.5s;
+    }
+    :hover {
+      color: $backgroundMain;
+    }
+  }
+}
